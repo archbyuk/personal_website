@@ -75,7 +75,7 @@ export default function Hero() {
         <div className="md:hidden w-full flex justify-center mt-8">
           <div className="md:hidden w-full flex justify-start pl-6 mt-8">
             <div
-              className="relative w-[240px] h-[280px] sm:w-[288px] sm:h-[320px] rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+              className="relative w-[320px] h-[320px] sm:w-[288px] sm:h-[320px] rounded-2xl overflow-hidden shadow-lg cursor-pointer"
               onClick={handleNext}
             >
               <Image
