@@ -73,11 +73,11 @@ export default function EumProjectPage() {
       <SideSection title="진행 과정">
         <ProgressTrack
           steps={[
-            { title: '기획 및 디자인', description: '플랫폼의 목표 설정 및 사용자 경험 설계' },
-            { title: '백엔드 개발', description: 'Flask와 BeautifulSoup를 활용한 크롤러 및 API 구현' },
-            { title: '프론트엔드 개발', description: 'Next.js와 Tailwind CSS를 활용한 사용자 인터페이스 개발' },
-            { title: 'AI 모델 통합', description: 'OpenAI API와 Kakao Local API를 연동하여 개인화된 추천 시스템 구축' },
-            { title: '해커톤 및 각종 대회 시연', description: '기획과 개발된 프로토타입을 가지고 각종 대회 시연발표 후 입상' },
+            { title: '기획 및 디자인', description: '목표 설정 및 사용자 경험 설계' },
+            { title: '백엔드 개발', description: 'SNS 및 블로그 크롤러 및 API 구현' },
+            { title: '프론트엔드 개발', description: 'FE 프레임워크를 활용한 사용자 인터페이스 개발' },
+            { title: 'AI 모델 통합', description: '외부 API를 연동하여 개인화된 추천 시스템 구축' },
+            { title: '해커톤 및 대회 참가', description: '기획과 MVP로 대회 시연발표 후 입상' },
           ]}
         />
       </SideSection>

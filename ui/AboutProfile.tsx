@@ -1,13 +1,13 @@
 'use client'
 
 import Image from "next/image";
-import { Mail, Award } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export default function AboutProfile() {
   return (
-    <div className="flex flex-col items-start space-y-3">
+    <div className="flex flex-col items-start space-y-6 w-full px-4 md:px-0 mt-12 md:mt-0">
       {/* 프로필 이미지 */}
-      <div className="relative w-[360px] h-[360px] rounded-xl overflow-hidden rotate-[6deg]">
+      <div className="relative w-full aspect-square rounded-xl overflow-hidden rotate-[6deg] mx-auto md:mx-0 md:w-[360px] md:h-[360px]">
         <Image
           src="/profile/profile3.png"
           alt="Jinuk Profile"
