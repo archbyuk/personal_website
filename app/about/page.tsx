@@ -8,7 +8,7 @@ import AboutProfile from "@/ui/AboutProfile";
 // 추후 이력서 다운로드 버튼 추가
 export default function AboutPage() {
   return (
-    <main className="w-full max-w-5xl mx-auto py-28">
+    <main className="w-full max-w-5xl mx-auto lg:py-28 py-14">
       <div className="grid grid-cols-1 md:grid-cols-3 items-start">
         
         <div className="md:col-span-2 space-y-20 text-gray-800">
@@ -19,6 +19,6 @@ export default function AboutPage() {
       </div>
 
       <History items={history} /> {/* 연혁 */}
-    </main>
+    </main> 
   );
 }

@@ -1,113 +1,91 @@
-import Image from 'next/image'
-import ProjectList from '@/ui/ProjectsList'
-import { MetaData } from '@/metadata/metadata'
+'use client';
+
+import Image from 'next/image';
+import ProjectList from '@/ui/ProjectsList';
+import { MetaData } from '@/metadata/metadata';
+import ContactForm from '@/ui/ContactForm';
 
 export default function Experience() {
   return (
-    <section className="w-full mt-28 bg-white min-h-[75vh]">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3">
-        
+    <section className="w-full mt-28 bg-white min-h-[70vh]">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-1 xl:grid-cols-3">
         {/* LEFT: 연혁 목록 */}
-        <div className="col-span-2">
+        <div className="xl:col-span-2">
           <ProjectList items={MetaData} />
         </div>
 
         {/* RIGHT: 구독 영역 + 워크 리스트 */}
-        <div className="space-y-10 w-full max-w-xl mx-auto">
-          {/* 이메일 송신 구간: 실제 구현할 것 */}
+        <div className="space-y-10 w-full max-w-xl mx-auto mt-12 xl:mt-0">
+          {/* 이메일 송신 구간 */}
           <div className="border border-gray-200 rounded-2xl p-6 text-left">
-            <h4 className="flex items-center gap-2 font-semibold text-gray-900 mb-2">
-                <Image src="/icons/e-mail.svg" alt="Email" width={20} height={20} />
-                Stay up to date
+            <h4 className="flex items-center gap-2 font-semibold text-gray-900 mb-2 text-base">
+              <Image src="/icons/e-mail.svg" alt="Email" width={20} height={20} />
+              이메일로 연락하기
             </h4>
             <p className="text-gray-600 text-sm mb-4">
-              Get notified when I publish something new, and unsubscribe at any time.
+              이메일과 메시지를 남겨주시면 빠르게 답변드리겠습니다.
             </p>
-            <form className="flex">
-              <input
-                type="email"
-                placeholder="Email address"
-                className="flex-1 rounded-l-md border border-gray-300 px-3 py-2 text-sm focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="bg-black text-white px-4 py-2 text-sm font-medium rounded-r-md hover:bg-gray-800"
-              >
-                Join
-              </button>
-            </form>
+
+            <ContactForm /> {/* 이메일 송신 컴포넌트 */}
+            <p className='text-xs text-gray-400 mt-5 -mb-4'>* 광고나 스팸은 보내지 않습니다.</p>
           </div>
 
           {/* 워크 리스트 */}
           <div className="border border-gray-200 rounded-2xl p-6 text-left">
-            <h4 className="flex items-center gap-2 font-semibold text-gray-900 mb-6">
-                <Image src="/icons/work.svg" alt="Work" width={20} height={20} />
-                Work
+            <h4 className="flex items-center gap-2 font-semibold text-gray-900 mb-6 text-base">
+              <Image src="/icons/work.svg" alt="Work" width={20} height={20} />
+              Work
             </h4>
 
             <ul className="space-y-5 text-sm">
-                <li className="flex items-center justify-between">
-                    {/* 왼쪽 아이콘 + 텍스트 묶음 */}
-                    <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
-                            <Image src="/icons/rabbithole.svg" alt="RabbitHole" width={40} height={40} />
-                        </div>
-                        <div>
-                        <p className="text-sm font-semibold text-gray-900">래빗홀컴퍼니</p>
-                        <p className="text-xs text-gray-500">Frontend Manager</p>
-                        </div>
+              {[
+                {
+                  icon: 'rabbithole.svg',
+                  title: '래빗홀컴퍼니',
+                  role: 'Frontend Manager',
+                  period: '24.07 ~ 현재',
+                },
+                {
+                  icon: 'taean.svg',
+                  title: 'AI융합산업진흥원',
+                  role: 'Full Stack Developer',
+                  period: '24.10 ~ 24.12',
+                },
+                {
+                  icon: 'ctilab.svg',
+                  title: 'Ctilab',
+                  role: '인턴',
+                  period: '24.01 ~ 24.02',
+                },
+                {
+                  icon: 'hanshin.svg',
+                  title: '한신대학교',
+                  role: '학부생',
+                  period: '20.03 ~ 25.02',
+                },
+              ].map((item, idx) => (
+                <li key={idx} className="flex items-center justify-between flex-wrap gap-y-2">
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
+                      <Image src={`/icons/${item.icon}`} alt={item.title} width={40} height={40} />
                     </div>
-                    {/* 기간 */}
-                    <p className="text-sm text-gray-500 whitespace-nowrap">24.07 ~ 현재</p>
-                </li>
-
-                <li className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
-                            <Image src="/icons/taean.svg" alt="태안 AI융합진흥원" width={48} height={48} />
-                        </div>
-                        <div>
-                        <p className="text-sm font-semibold text-gray-900">태안 AI융합산업진흥원</p>
-                        <p className="text-xs text-gray-500">Full Stack Developer</p>
-                        </div>
+                    <div>
+                      <p className="text-sm font-semibold text-gray-900">{item.title}</p>
+                      <p className="text-xs text-gray-500">{item.role}</p>
                     </div>
-                    <p className="text-sm text-gray-500 whitespace-nowrap">24.10 ~ 24.12</p>
+                  </div>
+                  <p className="text-sm text-gray-500 whitespace-nowrap">{item.period}</p>
                 </li>
-
-                <li className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
-                            <Image src="/icons/ctilab.svg" alt="씨티아이랩" width={48} height={48} />
-                        </div>
-                        <div>
-                        <p className="text-sm font-semibold text-gray-900">Ctilab</p>
-                        <p className="text-xs text-gray-500">인턴</p>
-                        </div>
-                    </div>
-                    <p className="text-sm text-gray-500 whitespace-nowrap">24.01 ~ 24.02</p>
-                </li>
-
-                <li className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
-                            <Image src="/icons/hanshin.svg" alt="한신대학교" width={32} height={32} />
-                        </div>
-                        <div>
-                        <p className="text-sm font-semibold text-gray-900">한신대학교</p>
-                        <p className="text-xs text-gray-500">학부생</p>
-                        </div>
-                    </div>
-                    <p className="text-sm text-gray-500 whitespace-nowrap">20.03 ~ 25.02</p>
-                </li>
-                
+              ))}
             </ul>
 
             <button className="mt-6 w-full border border-gray-300 text-gray-700 py-2 rounded-md text-sm hover:bg-gray-50">
-                Download CV ↓
+              Download CV ↓
             </button>
-            </div>
+            <p className='text-gray-500 text-xs mt-3 -mb-3'>* 이력서 삽입 예정(현재 x)</p>
+          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -33,3 +33,30 @@ body {
   -ms-overflow-style: none; /* IE, Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* 네비게이션바 hidden/visible */
+.navbar-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-visible {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --card: #ffffff;
+  --card-border: #e5e7eb;
+  --accent: #10b981; /* 예: emerald-500 */
+}
+
+.dark {
+  --bg: #111827;
+  --text: #f9fafb;
+  --card: #1f2937;
+  --card-border: #374151;
+  --accent: #34d399;
+}
