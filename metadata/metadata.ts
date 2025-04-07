@@ -196,10 +196,10 @@ export const skillData: SkillCategory[] = [
     title: "Design & Collaboration",
     items: [
       { label: "Figma", level: 2, context: "디자이너와 협업하며 UI 시안 제작 및 검토" },
-      { label: "Miro", level: 2, context: "아이디어 정리 및 팀 회의 시 플로우 정리에 활용" },
+      { label: "Miro", level: 2, context: "플로우 정리에 활용" },
       { label: "Notion", level: 2, context: "기획 및 개발 문서 작성에 지속적으로 사용" },
-      { label: "Discord", level: 2, context: "스터디 및 팀 프로젝트 커뮤니케이션 도구로 사용" },
-      { label: "Teams", level: 1, context: "외부 교육 및 협업에서 제한적으로 사용" },
+      { label: "Discord", level: 2, context: "사이드 프로젝트 시 많이 사용" },
+      { label: "Teams", level: 3, context: "주로 사용" },
     ],
   },
   {
@@ -227,7 +227,7 @@ export const skillData: SkillCategory[] = [
     items: [
       { label: "AWS (EC2, Lambda, S3, RDS)", level: 2, context: "기본적인 인프라 구성 및 배포 경험" },
       { label: "GCP", level: 1, context: "Colab 및 Storage 위주로 활용한 간단한 경험" },
-      { label: "Render", level: 2, context: "백엔드 서버 자동 배포에 사용" },
+      { label: "Render", level: 1, context: "백엔드 서버 자동 배포에 사용" },
       { label: "Vercel", level: 3, context: "프론트엔드 정적/동적 페이지 배포 경험" },
       { label: "Runpod", level: 1, context: "AI 모델 실행 환경으로 실험적 사용" },
     ],
@@ -245,7 +245,7 @@ export const skillData: SkillCategory[] = [
     items: [
       { label: "Git", level: 2, context: "협업 및 버전 관리, CLI 위주로 사용" },
       { label: "GitHub", level: 2, context: "프로젝트 협업 및 Actions 일부 사용" },
-      { label: "npm", level: 2, context: "패키지 관리 및 스크립트 실행에 사용" },
+      { label: "npm", level: 3, context: "패키지 관리 및 스크립트 실행에 사용" },
       { label: "RabbitMQ", level: 1, context: "비동기 메시지 큐 시스템에 대해 학습 및 실험" },
       { label: "Kafka", level: 1, context: "대용량 데이터 스트리밍 개념 학습 및 설치 경험" },
     ],
