@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 
-// Section Wrapper
+// Section Wrapper2
 export function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="mb-16 px-4 sm:px-6 md:px-0">

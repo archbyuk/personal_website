@@ -38,10 +38,10 @@ export default function Hero() {
 
         {/* 소셜 아이콘 */}
         <div className="flex gap-4 mb-16 sm:mb-20">
-          <a href="https://github.com/JinukSynth" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/archbyuk" target="_blank" rel="noopener noreferrer">
             <Image src="/icons/github.svg" alt="GitHub" width={32} height={32} />
           </a>
-          <a href="https://naver.com">
+          <a href="https://jinuk-io.tistory.com/">
             <Image src="/icons/tstory.svg" alt="Email" width={24} height={24} className="mt-0.5" />
           </a>
           {/* <a href="https://linkedin.com/in/..." target="_blank" rel="noopener noreferrer">

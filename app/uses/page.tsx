@@ -19,7 +19,7 @@ export default function UsesPage() {
 
       {/* 기술 리스트 */}
       <div className="space-y-20">
-        {skillData.map((category, idx) => (
+        {skillData.map((category, idx)  => (
           <section
             key={idx}
             className="grid grid-cols-1 sm:grid-cols-[180px_1fr] gap-4 sm:gap-6 border-l sm:border-l border-gray-200 pl-4 sm:pl-6"
