@@ -1,18 +1,18 @@
 'use client'
 
-import { SunIcon, ChevronDownIcon, XIcon } from 'lucide-react'
+import { ChevronDownIcon, XIcon } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { useTheme } from 'next-themes' // for dark mode
+// import { useTheme } from 'next-themes' // for dark mode
 
 export default function Navbar() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [showNav, setShowNav] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
-  const { theme, setTheme } = useTheme()
+  // const { theme, setTheme } = useTheme()
 
   // navbar items
   const navItems = [
@@ -133,13 +133,13 @@ export default function Navbar() {
           </div>
 
           {/* 다크모드 버튼 */}
-          <button
+          {/* <button
             className="w-10 h-10 rounded-full shadow-md bg-white dark:bg-gray-800 flex items-center justify-center"
             aria-label="Toggle Dark Mode"
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
           >
             <SunIcon className="w-5 h-5 text-gray-500 dark:text-yellow-400" />
-          </button>
+          </button> */}
         </div>
       </div>
     </header>
